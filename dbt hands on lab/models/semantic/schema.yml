@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: tasty_bytes_sales_sv
+    description: >
+      Semantic view over Tasty Bytes sales data. Joins orders, order line items,
+      and menu dimensions to expose revenue, items sold, and order count metrics
+      across truck brand, menu type, item category, and date dimensions.
+      Powers Cortex Analyst natural language queries.
+    config:
+      materialized: semantic_view

@@ -18,13 +18,17 @@ clean-targets:
 
 models:
   tasty_bytes_dbt_demo:
+    +copy_grants: true
     staging:
       +materialized: view
       +tags: ['staging']
-      
+
     marts:
       +materialized: table
       +tags: ['marts']
+
+    semantic:
+      +tags: ['semantic']
 
 snapshots:
   +target_schema: snapshots

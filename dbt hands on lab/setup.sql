@@ -260,3 +260,11 @@ SHOW WAREHOUSES LIKE 'dbt_%';
 SHOW ROLES LIKE 'dbt_%';
 SHOW ROLES LIKE 'analyst_role';
 SHOW ROLES LIKE 'finance_role';
+
+-- =====================================================
+-- 8. SEMANTIC VIEW PERMISSIONS
+-- =====================================================
+
+GRANT CREATE SEMANTIC VIEW ON SCHEMA tasty_bytes_dbt_db.dev_analytics TO ROLE dbt_developer_role;
+GRANT CREATE SEMANTIC VIEW ON SCHEMA tasty_bytes_dbt_db.analytics     TO ROLE dbt_prod_role;
+GRANT DATABASE ROLE SNOWFLAKE.CORTEX_USER TO ROLE analyst_role;
