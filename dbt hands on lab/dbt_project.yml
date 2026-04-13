@@ -30,8 +30,3 @@ models:
     semantic:
       +tags: ['semantic']
 
-snapshots:
-  +target_schema: snapshots
-  +strategy: timestamp
-  +unique_key: id
-  +updated_at: updated_at
