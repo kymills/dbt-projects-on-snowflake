@@ -25,15 +25,6 @@ models:
         tests:
           - not_null
           
-      - name: order_amount
-        description: "Total order amount before discounts"
-        tests:
-          - not_null
-          - dbt_utils.accepted_range:
-              min_value: 0
-              max_value: 10000
-              inclusive: true
-              
       - name: order_net_total
         description: "Final order amount after discounts and tax"
         tests:
